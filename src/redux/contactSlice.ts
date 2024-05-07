@@ -6,6 +6,7 @@ interface Contact {
   id: number;
   firstName: string;
   lastName: string;
+  number:string;
   status: 'active' | 'inactive';
 }
 

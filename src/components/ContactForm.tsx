@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../redux/contactSlice';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/rootReducer';
 
 // ContactForm component for creating a new contact
 const ContactForm: React.FC<{ onCreateContact: (contact: any) => void }> = ({ onCreateContact }) => {
   const dispatch = useDispatch();
-
+  const contacts = useSelector((state: RootState) => state.contacts); // Access contacts from Redux state
   // State variables for form inputs and error messages
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -13,10 +15,18 @@ const ContactForm: React.FC<{ onCreateContact: (contact: any) => void }> = ({ on
   const [status, setStatus] = useState<'active' | 'inactive'>('active');
   const [errorMessage, setErrorMessage] = useState('');
   const[numbererror,setnumbererror]=useState('');
+  
+ 
 
   // Function to handle form submission
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    //validation for number exist or not
+    const numberExists = contacts.some(contact => contact.number === number);
+    if (numberExists) {
+      setErrorMessage('Contact number already exists');
+      return;
+    }
     // Validation for contact number length
     if (number.length !== 10) {
       setErrorMessage('Contact number must be of 10 digits');
