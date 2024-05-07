@@ -6,7 +6,7 @@ import Contacts from './pages/Contacts';
 
 const HomePage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'contacts' | 'chartsAndMaps'>('contacts');
-  const [navbarText, setNavbarText] = useState('My Dashboard');
+  const [navbarText, setNavbarText] = useState('Contact Management App');
 
   const handleContactsClick = () => {
     setCurrentPage('contacts');
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <div className="bg-gray-800 h-screen w-64 ">
+      <div className=" sticky bg-gray-800 top-0  h-screen w-64 ">
         {/* Sidebar Content */}
         <div className="h-screen flex flex-col justify-between">
           {/* Sidebar Header */}

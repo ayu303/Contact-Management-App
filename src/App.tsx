@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contacts from './pages/Contacts';
 import ChartsAndMaps from './pages/ChartsAndMaps';
 import HomePage from './Home';
-import ContactPage from './components/ContactPage';
+
 
 const App: React.FC = () => {
   return (
