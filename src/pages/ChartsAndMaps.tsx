@@ -62,14 +62,15 @@ const ChartsAndMaps: React.FC = () => {
     <div className="w-full pt-20 px-4 pb-8">
       {/* Corona Cases Chart */}
       <h1 className="text-4xl font-bold mb-4 text-pink-600">Corona Cases Chart</h1>
-      <div className="border-2 border-red-100 w-5/12 m-auto 10 auto 10">
+      <div className="border-2 border-red-100 w-11/12 m-auto 10 auto 10">
         {/* Line chart */}
         <Line data={chartData} />
       </div>
-
+<br/>
+<br/>
       {/* Corona Cases World Map */}
       <h1 className="text-4xl font-bold mb-4 mt-4 text-blue-500">Corona Cases World Map</h1>
-      <div className="border-2 border-blue-500 w-11/12  m-auto 5 auto 5 h-64">
+      <div className="border-2 border-blue-500 w-11/12  m-auto 5 auto 5 h-72">
         {/* MapContainer for displaying world map */}
         <MapContainer
           className="m-auto w-full border-blue-700 h-72"
