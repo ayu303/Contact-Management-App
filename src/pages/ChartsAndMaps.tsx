@@ -52,7 +52,7 @@ const ChartsAndMaps: React.FC = () => {
         label: "Cases",
         data: graphData ? Object.values(graphData.cases) : [],
         fill: false,
-        borderColor: "#f50057",
+        borderColor: "#314155",
         tension: 0.2,
       },
     ],
@@ -61,19 +61,19 @@ const ChartsAndMaps: React.FC = () => {
   return (
     <div className="w-full pt-20 px-4 pb-8">
       {/* Corona Cases Chart */}
-      <h1 className="text-4xl font-bold mb-4 text-pink-600">Corona Cases Chart</h1>
-      <div className="border-2 border-red-100 w-11/12 m-auto 10 auto 10">
+      <h1 className="text-4xl font-bold mb-4 text-gray-800">Corona Cases Chart</h1>
+      <div className="border-2 border-gray-900 w-11/12 m-auto 10 auto 10">
         {/* Line chart */}
         <Line data={chartData} />
       </div>
 <br/>
 <br/>
       {/* Corona Cases World Map */}
-      <h1 className="text-4xl font-bold mb-4 mt-4 text-blue-500">Corona Cases World Map</h1>
-      <div className="border-2 border-blue-500 w-11/12  m-auto 5 auto 5 h-72">
+      <h1 className="text-4xl font-bold mb-4 mt-4 text-teal-800">Corona Cases World Map</h1>
+      <div className="border-2 border-teal-900 w-11/12  m-auto 5 auto 5 h-72">
         {/* MapContainer for displaying world map */}
         <MapContainer
-          className="m-auto w-full border-blue-700 h-72"
+          className="m-auto w-full border-teal-800 h-72"
           bounds={[[-60, -180], [85, 180]]} zoom={2}
           center={[20, 40]}
           scrollWheelZoom={true}

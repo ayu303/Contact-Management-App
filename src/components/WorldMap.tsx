@@ -1,6 +1,6 @@
 import { Marker, Popup } from "react-leaflet";
 import L from 'leaflet';
-import markerIcon from '../utils/marker_icon.png';
+import markerIcon from '../utils/pin.png';
 
 // Define interface for country data
 interface CountryData {
